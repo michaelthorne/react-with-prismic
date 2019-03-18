@@ -13,7 +13,6 @@ import NotFound from './NotFound'
 const App = (props) => (
   <Router>
     <Switch>
-      <Redirect exact from="/" to="/help"/>
       <Route exact path="/page/:uid" render={routeProps => <Page {...routeProps} prismicCtx={props.prismicCtx}/>}/>
       <Route exact path="/faq" render={routeProps => <Faq {...routeProps} prismicCtx={props.prismicCtx}/>}/>
       <Route exact path="/preview" render={routeProps => <Preview {...routeProps} prismicCtx={props.prismicCtx}/>}/>
